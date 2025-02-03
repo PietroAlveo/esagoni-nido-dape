@@ -5,41 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuovo Arrivato</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
         .hive-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
+            align-items: center;
+            position: relative;
+            width: 300px;
+            height: 300px;
         }
 
         .hexagon {
-            width: 120px;
-            height: 138px;
+            width: 100px;
+            height: 115px;
             background-color: #f4b400;
             color: white;
             text-align: center;
-            line-height: 138px;
+            line-height: 115px;
             font-weight: bold;
-            position: relative;
+            position: absolute;
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
 
-        .central img {
+        .hexagon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
+
+        /* Colori personalizzati */
+        .hexagon:nth-child(2) { background-color: #a1cc3a; }
+        .hexagon:nth-child(3) { background-color: #ff9301; }
+        .hexagon:nth-child(4) { background-color: #f6511f; }
+        .hexagon:nth-child(5) { background-color: #d60a52; }
+        .hexagon:nth-child(6) { background-color: #7da5d9; }
+        .hexagon:nth-child(7) { background-color: #9b59b6; } /* Colore a caso */
+
+        /* Posizionamento degli esagoni */
+        .central {
+            width: 120px;
+            height: 138px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hexagon:nth-child(2) { top: 0; left: 110px; }
+        .hexagon:nth-child(3) { top: 50px; left: 180px; }
+        .hexagon:nth-child(4) { top: 160px; left: 180px; }
+        .hexagon:nth-child(5) { top: 210px; left: 110px; }
+        .hexagon:nth-child(6) { top: 160px; left: 40px; }
+        .hexagon:nth-child(7) { top: 50px; left: 40px; }
     </style>
 </head>
 <body>
     <div class="hive-container">
+        <!-- Esagono centrale con la foto del candidato -->
         <div class="hexagon central">
-            <img src="https://alveogroup.sharepoint.com/:i:/s/Human-Resources/ETU48kzcHg1LgUK65n9mHYcB_c-c6wWYlPEpS7R4HbtS2w?e=E6RE3N" alt="Foto Nuovo Arrivato">
+            <img src="https://via.placeholder.com/120x138" alt="Foto Nuovo Arrivato">
         </div>
+
+        <!-- Esagoni intorno con le informazioni -->
         <div class="hexagon">Nome: Mario Rossi</div>
         <div class="hexagon">Ruolo: Consultant</div>
         <div class="hexagon">BU: ERP Team</div>
