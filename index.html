@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuovo Arrivato</title>
+    <style>
+        .hive-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .hexagon {
+            width: 120px;
+            height: 138px;
+            background-color: #f4b400;
+            color: white;
+            text-align: center;
+            line-height: 138px;
+            font-weight: bold;
+            position: relative;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .central img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+<body>
+    <div class="hive-container">
+        <div class="hexagon central">
+            <img src="https://alveogroup.sharepoint.com/:i:/s/Human-Resources/ETU48kzcHg1LgUK65n9mHYcB_c-c6wWYlPEpS7R4HbtS2w?e=E6RE3N" alt="Foto Nuovo Arrivato">
+        </div>
+        <div class="hexagon">Nome: Mario Rossi</div>
+        <div class="hexagon">Ruolo: Consultant</div>
+        <div class="hexagon">BU: ERP Team</div>
+        <div class="hexagon">Sede: Milano</div>
+        <div class="hexagon">Benvenuto a bordo! 🎉</div>
+    </div>
+</body>
+</html>
